@@ -7,9 +7,6 @@ public class VisibilityScorer extends Scorer {
 	
 	private static int VIS_RANGE = 20;
 
-	public VisibilityScorer(ValueGrid baseGrid) {
-		super(baseGrid);
-	}
 
 	protected int visibilityScore(Pair pair1, Pair pair2) {
 		if (!baseGrid.isValid(pair1) || !baseGrid.isValid(pair2)) { return 0; }

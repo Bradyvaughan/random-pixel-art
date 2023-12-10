@@ -1,16 +1,10 @@
 package fun.scoring;
 
 import fun.grid.Pair;
-import fun.grid.ValueGrid;
 
 public class ObscurityScorer extends Scorer {
 	
 	private static final int RANGE = 5;
-
-	public ObscurityScorer(ValueGrid baseGrid) {
-		super(baseGrid);
-		// TODO Auto-generated constructor stub
-	}
 	
 	@Override
 	public int valueForPixel(Pair loc) {

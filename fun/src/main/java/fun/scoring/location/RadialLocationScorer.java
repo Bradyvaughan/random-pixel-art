@@ -3,13 +3,14 @@ package fun.scoring.location;
 import fun.grid.ValueGrid;
 
 public class RadialLocationScorer extends LocationScorer {
-	private final double centerX;
-	private final double centerY;
+	private double centerX;
+	private double centerY;
 
-	public RadialLocationScorer(ValueGrid grid) {
-		super(grid);
-		centerX = grid.getNX() / 2.;
-		centerY = grid.getNY() / 2.;
+	@Override
+	public ValueGrid produceLocationScores(ValueGrid baseGrid) {
+		centerX = baseGrid.getNX() / 2.;
+		centerY = baseGrid.getNY() / 2.;
+		return super.produceLocationScores(baseGrid);
 	}
 
 	@Override

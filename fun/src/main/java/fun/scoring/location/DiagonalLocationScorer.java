@@ -8,15 +8,13 @@ public class DiagonalLocationScorer extends LocationScorer {
 	private int offset;
 	private double ratio;
 	
-	public DiagonalLocationScorer(ValueGrid grid) {
-		super(grid);
+	public DiagonalLocationScorer() {
 		this.intensity = (int) (Math.random() * 10);
 		this.offset = (int) (Math.random() * 1000);
 		this.ratio = .5 + Math.random();
 	}
 	
 	public DiagonalLocationScorer(int intensity, int offset, double ratio, ValueGrid grid) {
-		super(grid);
 		this.intensity = intensity;
 		this.offset = offset;
 		this.ratio = ratio;

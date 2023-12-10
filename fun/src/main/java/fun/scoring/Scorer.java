@@ -6,12 +6,9 @@ import fun.grid.ValueGrid;
 public abstract class Scorer {
 	
 	protected ValueGrid baseGrid;
-	
-	public Scorer(ValueGrid baseGrid) {
+
+	public ValueGrid scoreGrid(ValueGrid baseGrid) {
 		this.baseGrid = baseGrid;
-	}
-	
-	public ValueGrid scoreGrid() {
 		int nx = baseGrid.getNX();
 		int ny = baseGrid.getNY();
 		ValueGrid returnGrid = new ValueGrid(nx, ny);

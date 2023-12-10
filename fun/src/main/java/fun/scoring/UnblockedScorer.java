@@ -1,17 +1,11 @@
 package fun.scoring;
 
 import fun.grid.Pair;
-import fun.grid.ValueGrid;
 
 public class UnblockedScorer extends Scorer {
 	
-	private static final int DISTANCE = 20;
+	private static final int DISTANCE = 30;
 
-	public UnblockedScorer(ValueGrid baseGrid) {
-		super(baseGrid);
-		// TODO Auto-generated constructor stub
-	}
-	
 	private int getSupremumDistance(Pair loc) {
 		for (int i = 1; i < DISTANCE; i++) {
 			for (int j = -i; j < i; j++) {

@@ -22,7 +22,8 @@ public class HSVColorizer extends Colorizer {
 	@Override
 	public int[] getColorForValue(int val) {
 		float hue = ((val % huePeriod)) / ((float) huePeriod);
-		float sat = 1f - ((val % saturationPeriod)) / ((float) saturationPeriod);
+//		float sat = 1f - ((val % saturationPeriod)) / ((float) saturationPeriod);
+		float sat = 1;
 		float value = ((val % valuePeriod)) / ((float) valuePeriod);
 		return rgbArrayFromHSV(hue, sat, value);
 	}
